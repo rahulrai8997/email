@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Email Validation using</title>
+    <style>
+        .a{
+             text-align: center;
+        }
+        body{
+            background-color: antiquewhite;
+        }
+    </style>
+</head>
+<body>
+    <div class="a">
+        <br><br>
+        <h1> Email Validation using </h1>
+        <br>
+        <form onsubmit="return myfun()">
+            <div class="b">
+                <label> Email ID:</label>
+                <input type="text" name="" id="emailcheck" class="c">
+                <span id="n" class="l=f"></span>
+            </div>
+            <button onclick= "return myfun()">Submit</button>
+        </form>
+        <script>
+          
+            function  myfun(){
+
+                var  emailcheck=document.getElementById('emailcheck').value;4
+            var pattern= /^[A-Za-z.]{7,}@[A_Za-z]{3,10}[.]{1}[A-Za-z.]{2,6}$/;
+
+
+                if(pattern.test(emailcheck)){
+                    document.getElementById('n').innerHTML="Gulshan Email Id is Correct";
+                }else{
+                     document.getElementById('n').innerHTML="  Sorry Gulshan Email Id is  not Correct";
+                }
+                return false;
+            }
+        </script>
+
+    </div>
+</body>
+</html>
